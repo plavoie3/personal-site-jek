@@ -2,7 +2,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <div class="photoDiv">
-        <img class="photo" src="{% site.baseurl %}/public/images/headshot.JPG" alt="">
+        <img class="photo" src="/public/images/headshot.JPG" alt="">
       </div>
       <h1 class="sidetext">
         <a style="font-family: 'Pacifico', cursive;
@@ -25,12 +25,12 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "nav-page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="{% site.baseurl %}/projects.html">Projects</a>
+      <a class="sidebar-nav-item" href="{{ 'projects' | relative_url }}">Projects</a>
     </nav>
 
     <p class="rights">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
