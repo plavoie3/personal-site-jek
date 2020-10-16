@@ -14,7 +14,7 @@ title:               Phil Lavoie
 tagline:             Home
 description:         Personal Site
 url:                 'http://plavoie3.github.io'
-baseurl:             '/personal-site-jek'
+baseurl:             '/site'
 paginate:            5
 
 # Plugins, Tags, Categories and Analytics  
