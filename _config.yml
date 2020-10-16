@@ -1,10 +1,6 @@
 # Permalinks
 #
 
-
-baseurl: /personal-site-jek
-url: http://plavoie3.github.io
-
 # Collections
 
 collections:
@@ -17,8 +13,8 @@ collections:
 title:               Phil Lavoie
 tagline:             Home
 description:         Personal Site
-url:                 ''
-baseurl:             ''
+url:                 'http://plavoie3.github.io'
+baseurl:             '/personal-site-jek'
 paginate:            5
 
 # Plugins, Tags, Categories and Analytics  
