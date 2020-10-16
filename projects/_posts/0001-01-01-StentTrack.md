@@ -14,7 +14,7 @@ title: StentTrack
 </div>
 
 <figure style="text-align: -webkit-center;">
-<img src="/public/images/stent_setup.png" alt="StentTrack setup" width="40%" height="40%">
+<img src="{{ '/public/images/stent_setup.png' | relative_url }}" alt="StentTrack setup" width="40%" height="40%">
 <small>
 Initial landing view and notifications setup.
 </small>
