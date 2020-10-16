@@ -1,6 +1,10 @@
 # Permalinks
 #
 
+
+baseurl: /personal-site-jek
+url: http://plavoie3.github.io
+
 # Collections
 
 collections:
