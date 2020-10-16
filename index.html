@@ -1,0 +1,11 @@
+---
+layout: default
+title: Home
+---
+
+{% capture index %}
+
+{% include home.md %}
+{% endcapture %}
+
+{{ index | markdownify }}

@@ -1,0 +1,27 @@
+# Permalinks
+#
+
+# Collections
+
+collections:
+  projects:
+    output: true
+
+    
+
+# Setup
+title:               Phil Lavoie
+tagline:             Home
+description:         Personal Site
+url:                 ''
+baseurl:             ''
+paginate:            5
+
+# Plugins, Tags, Categories and Analytics  
+plugins:          [jekyll-paginate]
+
+# About/contact
+author:
+  name:              Phil Lavoie
+  url:               ''
+  email:             ''
