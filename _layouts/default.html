@@ -5,11 +5,19 @@
 
   <body class="theme-base-0b">
 
+    <script src="{{ '/' | relative_url }}Ideal-Image-Slider-JS-master/ideal-image-slider.js"></script>
+    <script src="{{ '/' | relative_url }}Ideal-Image-Slider-JS-master/iis-bullet-nav.js"></script>
+    <script src="{{ '/' | relative_url }}Ideal-Image-Slider-JS-master/iis-captions.js"></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.js"></script>        
+    <script type="text/javascript" src="{{ '/' | relative_url }}slick/slick.min.js"></script>
+
     {% include sidebar.html %}
 
     <div class="content container">
       {{ content }}
     </div>
+
 
   </body>
 </html>
