@@ -41,11 +41,11 @@ title: StentTrack
         <div class="slide__caption"> Patient indicates which (if any) symptoms they are experiencing.</div>
     </div>
     <div>
-        <img src="{{ 'public/images/stent_submit.png' | relative_url }}" alt="Minimum required attributes">
+        <img src="{{ 'public/images/stent/stent_submit.png' | relative_url }}" alt="Minimum required attributes">
         <div class="slide__caption">Log submission sent! </div>
     </div>
     <div>
-        <img src="{{ 'public/images/stent_log_meds.png' | relative_url }}" alt="Minimum required attributes">
+        <img src="{{ 'public/images/stent/stent_log_meds.png' | relative_url }}" alt="Minimum required attributes">
         <div class="slide__caption"> Medicine log view when it is not time for a prescription's next dose</div>
     </div>
 </div>

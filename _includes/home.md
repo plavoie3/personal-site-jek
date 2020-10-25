@@ -1,5 +1,3 @@
-# Hello!
-
 {% comment %} Keep Pinto's age up to date :) {% endcomment %}
 
 {% assign dateStart = "April 26, 2020" | date: "%s" %}
