@@ -4,7 +4,7 @@
 
 <p> Below is a picture of my dog, Pinto! </p>
 
-<p> She is <span id="PintoAge"> </span> months old and loves exploring the world, her frisbee, and wiggling! </p>
+<p> She is <span id="PintoAge"> </span> months <span id="PintoAgeWeeks"> </span> old and loves exploring the world, her frisbee, and wiggling! </p>
 
 <img src="{{ '/public/images/pinto.jpg' | relative_url }}" alt="Pinto!">
 
@@ -17,10 +17,13 @@ $( document ).ready(function() {
     // months are zero-based! But days and years are one-based ... ;)
     $birthday = new Date(2020, 03, 26);
 
-    console.log($today);
-    console.log($birthday);
+    let weeksDays = differenceInWeeks($birthday, $today);
+
+    const weeks = weeksDays[0];
+    const days = weeksDays[1];
 
     $('#PintoAge').text(differenceInMonths($birthday, $today));
+    $('#PintoAgeWeeks').text('('+ weeks + ' weeks and ' + days + ' days)');
 
 });
 
@@ -30,5 +33,23 @@ function differenceInMonths(dateFrom, dateTo) {
     (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
     
 }
+
+function differenceInWeeks(dt2, dt1) {
+
+  // for weeks
+  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  diff /= (60 * 60 * 24 * 7);
+
+
+  // for days
+  n = Math.abs(diff); 
+  var decimal = n - Math.floor(n)
+
+  var weeks = Math.abs(Math.round(diff));
+  var days = Math.round(decimal * 7);
+
+  return [weeks, days];
+  
+ }
 
 </script>

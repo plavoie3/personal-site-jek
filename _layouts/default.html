@@ -9,8 +9,54 @@
 
     <div id="top" class="content container">
       {{ content }}
-    </div>
 
+      <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+    </div>
 
   </body>
 </html>
+
+<script>
+
+$(window).scroll(function() {
+
+  if ($('#SideBarNav').isOnScreen()) {
+
+    $('#return-to-top').fadeOut(200);
+
+  } else {
+
+    $('#return-to-top').fadeIn(200);
+  }
+
+});
+
+$('#return-to-top').click(function() {
+
+    $('body,html').animate({
+        scrollTop : 0
+    }, 500);
+
+});
+
+$.fn.isOnScreen = function(){
+    
+    var win = $(window);
+    
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+    
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+    
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    
+};
+
+</script>
