@@ -4,7 +4,7 @@
 
 <p> It's also a place to show pictures of and talk about my dog, Pinto! </p>
 
-<p> She is an <span id="PintoAge"> </span> month <span id="PintoAgeWeeks"> </span> old Austrailian Shepard who loves exploring the world, frisbees, and wiggling! &#128512; </p>
+<p> She is a <span id="PintoAge"> </span> month old Austrailian Shepard who loves exploring the world, frisbees, and wiggling! &#128512; </p>
 
 <img src="{{ '/public/images/pinto.jpg' | relative_url }}" alt="Pinto!">
 
@@ -23,44 +23,32 @@
 
 $( document ).ready(function() {
 
-    $today = new Date($.now());
+    today = new Date()
+    birthday = new Date(2020,03,26)
 
-    // months are zero-based! But days and years are one-based ... ;)
-    $birthday = new Date(2020, 03, 26);
+    a = calcDate(today, birthday)
+    console.log(a)
 
-    let weeksDays = differenceInWeeks($birthday, $today);
 
-    const weeks = weeksDays[0];
-    const days = weeksDays[1];
-
-    $('#PintoAge').text(differenceInMonths($birthday, $today));
-    $('#PintoAgeWeeks').text('('+ weeks + ' weeks and ' + days + ' days)');
+    $('#PintoAge').text(a);
 
 });
 
-function differenceInMonths(dateFrom, dateTo) {
+function calcDate(date1,date2) {
+    var diff = Math.floor(date1.getTime() - date2.getTime());
+    var day = 1000 * 60 * 60 * 24;
 
-    return dateTo.getMonth() - dateFrom.getMonth() + 
-    (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
-    
+    var days = Math.floor(diff/day);
+    var months = Math.floor(days/31);
+    var years = Math.floor(months/12);
+
+    var message = date2.toDateString();
+    message += " was "
+    message += days + " days " 
+    message += months + " months "
+    message += years + " years ago \n"
+
+    return months
 }
-
-function differenceInWeeks(dt2, dt1) {
-
-  // for weeks
-  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
-  diff /= (60 * 60 * 24 * 7);
-
-
-  // for days
-  n = Math.abs(diff); 
-  var decimal = n - Math.floor(n)
-
-  var weeks = Math.abs(Math.round(diff));
-  var days = Math.round(decimal * 7);
-
-  return [weeks, days];
-  
- }
 
 </script>
