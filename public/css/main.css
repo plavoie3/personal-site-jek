@@ -38,3 +38,11 @@
     color: #fff;
     top: 5px;
 }
+
+#greeting {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.hide {
+    opacity: 0 !important;
+}

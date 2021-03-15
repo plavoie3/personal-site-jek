@@ -3,7 +3,7 @@ layout: project
 title: StentTrack
 ---
 
-<span class="post-date"> iOS App (Swift + Xcode) </span>
+<span class="post-date"> iOS App (Swift + Xcode + Firebase) </span>
 
 <div class="message"> 
 
