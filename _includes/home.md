@@ -4,7 +4,7 @@
 
 <p> It's also a place to show pictures of and talk about my dog, Pinto! </p>
 
-<p> She is a <span id="PintoAge"> </span> month old Austrailian Shepard who loves exploring the world, frisbees, and wiggling! &#128512; </p>
+<p> She is a <span id="PintoAge"> </span> old Australian Shepard who loves exploring the world, playing with frisbees and balls, and wiggling! &#128512; </p>
 
 <img src="{{ '/public/images/pinto.jpg' | relative_url }}" alt="Pinto!">
 
@@ -24,6 +24,8 @@
 $( document ).ready(function() {
 
     today = new Date()
+    
+    // April 26, 2020
     birthday = new Date(2020,03,26)
 
     a = calcDate(today, birthday)
@@ -35,6 +37,7 @@ $( document ).ready(function() {
 });
 
 function calcDate(date1,date2) {
+
     var diff = Math.floor(date1.getTime() - date2.getTime());
     var day = 1000 * 60 * 60 * 24;
 
@@ -42,13 +45,20 @@ function calcDate(date1,date2) {
     var months = Math.floor(days/31);
     var years = Math.floor(months/12);
 
-    var message = date2.toDateString();
-    message += " was "
-    message += days + " days " 
-    message += months + " months "
-    message += years + " years ago \n"
+    var monthsThisYear = months - (years * 12);
 
-    return months
+    var combined;
+
+    if (monthsThisYear === 0) {
+
+      combined = years + " year ";
+
+    } else {
+      
+      combined = years + " year and " + monthsThisYear + " month ";
+    }
+    return combined;
+
 }
 
 </script>
