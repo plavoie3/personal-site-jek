@@ -29,10 +29,11 @@ title: Contact
     <fieldset>
     <label> How should I return your message? </label>
     <select name="method" style="margin-left: 10px;" name="method" tabindex="6">
+        <option>N/A</option>
         <option>Email</option>
         <option>Phone</option>
         <option>LinkedIn</option>
-        <option>Other</option>
+        <option>Other Method Provided</option>
     </select>
     </fieldset>
     <fieldset>

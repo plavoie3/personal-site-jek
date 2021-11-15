@@ -31,7 +31,16 @@
       {% endfor %}
 
       <a class="sidebar-nav-item{% if page.url == '/projects' %} active{% endif %}" href="{{ 'projects' | relative_url }}#top">Projects</a>
+      
+      <a id="imageLink" class="sidebar-nav-item" href="https://www.linkedin.com/in/phil-lavoie/">
+        <img id="linkedInIcon" src="{{ 'public/images/LI-In-Bug.PNG' | relative_url }}"/>
+      </a>
+      
+
     </nav>
+
+
+
     
     
     <p class="rights">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
@@ -57,6 +66,22 @@
     border-radius: 50%;
     opacity: .7;
 }
+
+#linkedInIcon {
+
+  margin: auto;
+  width: 25px;
+  border-radius: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#imageLink{
+
+  display: inline-block}
+
+
+
 
 
 </style>
