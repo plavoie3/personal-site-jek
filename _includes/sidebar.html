@@ -30,8 +30,12 @@
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item{% if page.url == '/projects' %} active{% endif %}" href="{{ 'projects' | relative_url }}#top">Projects</a>
-      
+      {% if page.url == "/projects.html" %}
+        <a class="sidebar-nav-item active" href="{{ 'projects' | relative_url }}#top">Projects</a>
+      {% else %}
+        <a class="sidebar-nav-item" href="{{ 'projects' | relative_url }}#top">Projects</a>
+      {% endif %}
+
       <a id="imageLink" class="sidebar-nav-item" href="https://www.linkedin.com/in/phil-lavoie/">
         <img id="linkedInIcon" src="{{ 'public/images/LI-In-Bug.png' | relative_url }}"/>
       </a>

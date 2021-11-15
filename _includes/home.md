@@ -1,10 +1,10 @@
 <p> My name is Phil, and welcome to my personal site! </p>
 
-<p>This site is updated sporadically as time allows and serves as a place for some general information <a href="./about" title="Go to About me!"> about me </a> and a brief portfolio of some of the shareable <a href="./projects" title="Go to Projects!"> projects / side learnings </a> I've worked on or am currently working on. </p>
+<p>This site is updated sporadically and serves as a place for some general information <a href="./about" title="Go to About me!"> about me </a> and a brief portfolio of some of the <a href="./projects" title="Go to Projects!"> projects and side things </a> I've worked on or am currently working on. </p>
 
 <p> It's also a place to show pictures of and talk about my dog, Pinto! </p>
 
-<p> She is a <span id="PintoAge"> </span> old Australian Shepard who loves exploring the world, playing with frisbees and balls, and wiggling! &#128512; </p>
+<p> She is a <span id="PintoAge"> </span> old Australian Shepard who loves exploring, playing frisbee, and of course...wiggling! &#128512; </p>
 
 <img src="{{ '/public/images/pinto.jpg' | relative_url }}" alt="Pinto!">
 
