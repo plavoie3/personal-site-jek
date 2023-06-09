@@ -1,4 +1,4 @@
-<p> My name is Phil, and welcome to my personal site! </p>
+<p> My name is Phil, welcome to my personal site! </p>
 
 <p>This site is updated sporadically and serves as a place for some general information <a href="./about" title="Go to About me!"> about me </a> and a brief portfolio of some of the <a href="./projects" title="Go to Projects!"> projects and side things </a> I've worked on or am currently working on. </p>
 
